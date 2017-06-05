@@ -1,4 +1,3 @@
-===========
 NDim_ForceAtlas2
 ===========
 
@@ -26,7 +25,7 @@ Foreword
 =========
 
 I've written this module because of a personal need of creating a 3D graph.
-I'm not a professional programmer, so it can be rough at the edges :)
+I'm not a professional programmer, so it may be rough at the edges :)
 
 There's no parallelization implemented. Processing exceptionally large or dense
 graphs can be time-consuming.
@@ -60,39 +59,39 @@ Alternatively, for a NetworkX graph as an input:
 
 All parameters of ``ndforceatlas.ndforceatlas()``:
 
-* ``g`` *numpy.ndarray* :: adjacency matrix (...or a edges weight matrix) of nodes.
+* ``g`` *numpy.ndarray* : adjacency matrix (...or a edges weight matrix) of nodes.
 
-* ``n_dim=2`` :: Number of desired output graph dimensions.
+* ``n_dim=2`` : Number of desired output graph dimensions.
 
-* ``n_iter=512`` :: Number of iterations.
+* ``n_iter=512`` : Number of iterations.
 
-* ``scaling=2.0`` :: Size of the output graph.
+* ``scaling=2.0`` : Size of the output graph.
 
-* ``gravity=1.0`` :: Gravity, used to keep weakly connected nodes from drifting away.
+* ``gravity=1.0`` : Gravity, used to keep weakly connected nodes from drifting away.
   Increasing ``gravity`` brings them closer to point zero.
 
-* ``use_strong_gravity=False`` :: Optional setting.
+* ``use_strong_gravity=False`` : Optional setting.
 
-* ``nodes_barnes_hut_optimization=True`` :: Whether Barnes Hut tree algorithm
+* ``nodes_barnes_hut_optimization=True`` : Whether Barnes Hut tree algorithm
   should be used when calculating repulsion. Might be counter-productive on smaller graphs.
 
-* ``edges_barnes_hut_optimization=False`` :: Whether Barnes Hut tree algorithm
+* ``edges_barnes_hut_optimization=False`` : Whether Barnes Hut tree algorithm
   should be used when calculating attraction. Might be useful in large, dense graphs.
   Using it in small or sparse graphs is discouraged.
 
-* ``barnes_hut_theta=1.2`` :: Larger theta = more accuracy = less speed.
+* ``barnes_hut_theta=1.2`` : Larger theta = more accuracy = less speed.
 
-* ``edge_weight_influence=1.0`` :: Modifies attraction force between nodes.
+* ``edge_weight_influence=1.0`` : Modifies attraction force between nodes.
 
-* ``dissuade_hubs=False`` :: Enabling this parameter decreases node clustering in the output graph.
+* ``dissuade_hubs=False`` : Enabling this parameter decreases node clustering in the output graph.
 
-* ``linlog_mode=False`` :: With LinLog mode enabled attraction force is calculated logarithmically.
+* ``linlog_mode=False`` : With LinLog mode enabled attraction force is calculated logarithmically.
   This way graphs tend to be sparser, with structure of small clusters more apparent.
 
-* ``periodic_autoscale=True`` :: Every so often graph will try to scale automatically,
+* ``periodic_autoscale=True`` : Every so often graph will try to scale automatically,
   to converge to final-ish size faster.
 
-* ``verbose=False`` :: Enabling this parameter will display progress messages.
+* ``verbose=False`` : Enabling this parameter will display progress messages.
 
 Example:
 
@@ -101,6 +100,7 @@ Example:
     print(result)
 
 Prints following output:
+
     [array([ 2.05005147, -2.17161573, -0.47074849]), array([ 0.12278506,  1.03515458,  2.64511372]),
     array([ 0.35797738,  2.14539338, -2.0870159 ]), array([-2.80593661, -1.29705299, -0.5155778 ])]
 
@@ -111,15 +111,15 @@ For ``ndbarneshut`` usage, There are classes/functions:
         length
         )
 
-* ``pos`` :: Position as numpy.ndarray, usually numpy.zeros(n_dim)
+* ``pos`` : Position as numpy.ndarray, usually numpy.zeros(n_dim)
 
-* ``length`` :: Length of an edge of node's hypercube
+* ``length`` : Length of an edge of node's hypercube
 
     ndbarneshut.Node.fit(
         bodies
         )
 
-* ``bodies`` :: Body or list of bodies, given as a ``(position, mass)`` tuples,
+* ``bodies`` : Body or list of bodies, given as a ``(position, mass)`` tuples,
   where ``position`` is a ``numpy.ndarray`` and ``mass`` is an ``int`` or a ``float``.
 
     ndbarneshut.Node.calculate_coms()
@@ -134,10 +134,10 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * This function returns a list of ``(position, mass)`` tuples of nodes affecting a given body.
 
-* ``body`` :: Body, given as a ``(position, mass)`` tuple,
+* ``body`` : Body, given as a ``(position, mass)`` tuple,
   where ``position`` is a ``numpy.ndarray`` and ``mass`` is an ``int`` or a ``float``.
 
-* ``theta=1.2`` :: Larger theta = more accuracy = less speed.
+* ``theta=1.2`` : Larger theta = more accuracy = less speed.
 
     ndbarneshut.Node.summary(
         include_empty=False,
@@ -146,9 +146,9 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * Returns node and all its children in a print-friendly form.
 
-* ``include_empty=False`` :: By default, all empty nodes are excluded from the summary.
+* ``include_empty=False`` : By default, all empty nodes are excluded from the summary.
 
-* ``_final=True`` :: For internal purposes.
+* ``_final=True`` : For internal purposes.
 
 Example:
 
