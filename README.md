@@ -124,13 +124,13 @@ For ``ndbarneshut`` usage, There are classes/functions:
 * ``bodies`` : Body or list of bodies, given as a ``(position, mass)`` tuples,
   where ``position`` is a ``numpy.ndarray`` and ``mass`` is an ``int`` or a ``float``.
 
-
+.
     ndbarneshut.Node.calculate_coms()
 
 * This function calculates all centers of mass of a given node and all its children nodes.
   It has to be called before output can be given.
 
-
+.
     ndbarneshut.Node.neighbors(
         body,
         theta=1.2
@@ -143,7 +143,7 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * ``theta=1.2`` : Larger theta = more accuracy = less speed.
 
-
+.
     ndbarneshut.Node.summary(
         include_empty=False,
         _final=True
