@@ -104,6 +104,7 @@ Prints following output:
     [array([ 2.05005147, -2.17161573, -0.47074849]), array([ 0.12278506,  1.03515458,  2.64511372]),
     array([ 0.35797738,  2.14539338, -2.0870159 ]), array([-2.80593661, -1.29705299, -0.5155778 ])]
 
+
 For ``ndbarneshut`` usage, There are classes/functions:
 
     ndbarneshut.Node(
@@ -115,17 +116,20 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * ``length`` : Length of an edge of node's hypercube
 
-        ndbarneshut.Node.fit(
+
+    ndbarneshut.Node.fit(
         bodies
         )
 
 * ``bodies`` : Body or list of bodies, given as a ``(position, mass)`` tuples,
   where ``position`` is a ``numpy.ndarray`` and ``mass`` is an ``int`` or a ``float``.
 
-        ndbarneshut.Node.calculate_coms()
+
+    ndbarneshut.Node.calculate_coms()
 
 * This function calculates all centers of mass of a given node and all its children nodes.
   It has to be called before output can be given.
+
 
     ndbarneshut.Node.neighbors(
         body,
@@ -139,6 +143,7 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * ``theta=1.2`` : Larger theta = more accuracy = less speed.
 
+
     ndbarneshut.Node.summary(
         include_empty=False,
         _final=True
@@ -149,6 +154,7 @@ For ``ndbarneshut`` usage, There are classes/functions:
 * ``include_empty=False`` : By default, all empty nodes are excluded from the summary.
 
 * ``_final=True`` : For internal purposes.
+
 
 Example:
 
