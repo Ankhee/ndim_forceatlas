@@ -115,14 +115,14 @@ For ``ndbarneshut`` usage, There are classes/functions:
 
 * ``length`` : Length of an edge of node's hypercube
 
-    ndbarneshut.Node.fit(
+        ndbarneshut.Node.fit(
         bodies
         )
 
 * ``bodies`` : Body or list of bodies, given as a ``(position, mass)`` tuples,
   where ``position`` is a ``numpy.ndarray`` and ``mass`` is an ``int`` or a ``float``.
 
-    ndbarneshut.Node.calculate_coms()
+        ndbarneshut.Node.calculate_coms()
 
 * This function calculates all centers of mass of a given node and all its children nodes.
   It has to be called before output can be given.
