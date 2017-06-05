@@ -1,7 +1,7 @@
-NDim_ForceAtlas2
+ndim_forceatlas
 ===========
 
-NDim_ForceAtlas2 is an implementation of Gephi's ForceAtlas2 algorithm
+ndim_forceatlas is an implementation of Gephi's ForceAtlas2 algorithm
 in Python 3, with option of specifying number of output dimensions.
 
 This package also includes a dimension-agnostic implementation
