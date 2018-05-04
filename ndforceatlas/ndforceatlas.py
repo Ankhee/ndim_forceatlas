@@ -146,4 +146,4 @@ def ndforceatlas_networkx(g, **kwargs):
         "Graph is not a NetworkX graph."
 
     m = networkx.to_numpy_matrix(g)
-    ndforceatlas(m, **kwargs)
+    return ndforceatlas(m, **kwargs)
